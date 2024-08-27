@@ -1,4 +1,5 @@
 import discord
+import os
 INTENTS = discord.Intents.all()
 client = discord.Client(intents = INTENTS)
 # Discord 클라이언트 객체 생성
@@ -26,4 +27,5 @@ async def on_message(message):
     activity = discord.Game(name="해바라기 씨앗 먹기")
     await client.change_presence(activity=activity)
 
-client.run('MTI3NzE4NTI5NjE0ODIwNTY1OA.G18tVo.JIcQ3bbtmA8IG3kRt4IEp5VK0nUqC4eqpEdX9I')
+access_token = os.environ["BOT_TOKEN"]
+client.run('access_token')
